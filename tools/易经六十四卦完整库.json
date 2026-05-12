@@ -1,0 +1,3340 @@
+{
+  "metadata": {
+    "name": "易经六十四卦完整库",
+    "version": "1.0",
+    "description": "合并自仓库多来源；卦爻优先采用详实批次与脚本，结构与二进制按上下卦统一。",
+    "source": "基于王弼注本《周易》整理；合并脚本 build_merged_library.py",
+    "total_hexagrams": 64,
+    "canonical_json_file": "易经六十四卦数据库.json",
+    "merge_note": "主参考 JSON：易经六十四卦数据库.json；64 卦骨架来自 generate_complete_db.py；1–8 卦叠加 generate_hexagram_db；1–2、3–4 叠加 batch 批次；卦辞/卦解中间隙由 generate_complete_64 补全；54–64 叠加 complete_hexagrams.new_hexagrams。binary/unicode_symbol 由 upper_trigram/lower_trigram 推导。",
+    "fields": {
+      "id": "卦序（1-64）",
+      "name": "卦名",
+      "unicode_symbol": "卦象Unicode符号（上卦+下卦）",
+      "upper_trigram": "上卦（外卦）",
+      "lower_trigram": "下卦（内卦）",
+      "binary": "二进制表示（阳=1，阴=0，从下往上）",
+      "judgment": "卦辞",
+      "judgment_interpretation": "卦辞白话解读",
+      "yao_ci": "爻辞（初爻到上爻）",
+      "image": "象传",
+      "image_interpretation": "象传白话解读",
+      "core_meaning": "核心含义（现代解读）",
+      "keywords": "关键词"
+    },
+    "yao_placeholder_remaining_ids": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "yao_placeholder_count": 45
+  },
+  "trigrams": {
+    "乾": {
+      "unicode": "☰",
+      "nature": "天",
+      "attribute": "健",
+      "binary": "111"
+    },
+    "兑": {
+      "unicode": "☱",
+      "nature": "泽",
+      "attribute": "悦",
+      "binary": "110"
+    },
+    "离": {
+      "unicode": "☲",
+      "nature": "火",
+      "attribute": "丽",
+      "binary": "101"
+    },
+    "震": {
+      "unicode": "☳",
+      "nature": "雷",
+      "attribute": "动",
+      "binary": "100"
+    },
+    "巽": {
+      "unicode": "☴",
+      "nature": "风",
+      "attribute": "入",
+      "binary": "011"
+    },
+    "坎": {
+      "unicode": "☵",
+      "nature": "水",
+      "attribute": "陷",
+      "binary": "010"
+    },
+    "艮": {
+      "unicode": "☶",
+      "nature": "山",
+      "attribute": "止",
+      "binary": "001"
+    },
+    "坤": {
+      "unicode": "☷",
+      "nature": "地",
+      "attribute": "顺",
+      "binary": "000"
+    }
+  },
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾为天",
+      "short_name": "乾卦",
+      "unicode_symbol": "☰☰",
+      "upper_trigram": "乾",
+      "lower_trigram": "乾",
+      "binary": "111111",
+      "judgment": "元亨利贞。",
+      "judgment_interpretation": "乾卦象征天，代表创始、通达、适宜、正固。这是纯阳之卦，寓意强盛和进取。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "潜龙勿用。",
+          "interpretation": "龙潜伏在水中，暂时不要行动。"
+        },
+        {
+          "position": "九二",
+          "text": "见龙在田，利见大人。",
+          "interpretation": "龙出现在田野，有利于见到有德行的人。"
+        },
+        {
+          "position": "九三",
+          "text": "君子终日乾乾，夕惕若厉，无咎。",
+          "interpretation": "君子整天勤奋努力，晚上也警惕谨慎，即使有危险也无灾祸。"
+        },
+        {
+          "position": "九四",
+          "text": "或跃在渊，无咎。",
+          "interpretation": "或者跃起或者深陷深渊，没有灾祸。"
+        },
+        {
+          "position": "九五",
+          "text": "飞龙在天，利见大人。",
+          "interpretation": "龙飞在天空中，有利于见到有德行的人。"
+        },
+        {
+          "position": "上九",
+          "text": "亢龙有悔。",
+          "interpretation": "龙飞得太高，会有悔恨。"
+        }
+      ],
+      "image": "天行健，君子以自强不息。",
+      "image_interpretation": "天道运行刚健有力，君子应该效法天道，自强不息。",
+      "core_meaning": "创始、进取、刚健、成功",
+      "keywords": [
+        "成功",
+        "进取",
+        "创始",
+        "刚健",
+        "领导力"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "坤为地",
+      "short_name": "坤卦",
+      "unicode_symbol": "☷☷",
+      "upper_trigram": "坤",
+      "lower_trigram": "坤",
+      "binary": "000000",
+      "judgment": "元亨，利牝马之贞。君子有攸往，先迷后得主，利西南得朋，东北丧朋。安贞吉。",
+      "judgment_interpretation": "坤卦象征地，代表柔顺、包容、承载。利于像母马一样坚守正道。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "履霜，坚冰至。",
+          "interpretation": "踩到霜，就知道坚冰快要到了。比喻见微知著。"
+        },
+        {
+          "position": "六二",
+          "text": "直方大，不习无不利。",
+          "interpretation": "正直、端方、大气，不学习也没有不利。"
+        },
+        {
+          "position": "六三",
+          "text": "含章可贞，或从王事，无成有终。",
+          "interpretation": "蕴含美德可以坚守正道，或者从事王事，虽然不成功但有好结果。"
+        },
+        {
+          "position": "六四",
+          "text": "括囊，无咎无誉。",
+          "interpretation": "扎紧口袋，没有灾祸也没有荣誉。比喻谨慎收敛。"
+        },
+        {
+          "position": "六五",
+          "text": "黄裳元吉。",
+          "interpretation": "黄色的下裳，大吉。"
+        },
+        {
+          "position": "上六",
+          "text": "龙战于野，其血玄黄。",
+          "interpretation": "龙在原野上交战，流出黑黄色的血。"
+        }
+      ],
+      "image": "地势坤，君子以厚德载物。",
+      "image_interpretation": "大地气势厚实和顺，君子应该效法大地，以厚德承载万物。",
+      "core_meaning": "柔顺、包容、承载、配合",
+      "keywords": [
+        "包容",
+        "配合",
+        "承载",
+        "柔顺",
+        "耐心"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "水雷屯",
+      "short_name": "屯卦",
+      "unicode_symbol": "☵☳",
+      "upper_trigram": "坎",
+      "lower_trigram": "震",
+      "binary": "100010",
+      "judgment": "元亨利贞。勿用有攸往，利建侯。",
+      "judgment_interpretation": "屯卦象征初生，万物始生，充满艰难。不利于有所往，利于建立诸侯。此卦表示事物初生阶段，需要耐心经营，打好基础。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "磐桓，利居贞，利建侯。",
+          "interpretation": "徘徊不前，利于安居守正，利于建立诸侯。初生阶段不宜冒进，应稳固根基。"
+        },
+        {
+          "position": "六二",
+          "text": "屯如邅如，乘马班如。匪寇婚媾，女子贞不字，十年乃字。",
+          "interpretation": "艰难徘徊，骑马盘旋。不是强盗而是求婚者，女子守正不嫁，十年才嫁。比喻时机未到，需耐心等待。"
+        },
+        {
+          "position": "六三",
+          "text": "即鹿无虞，惟入于林中，君子几不如舍，往吝。",
+          "interpretation": "追鹿没有虞人引导，只会陷入林中。君子见机不如舍弃，前往会有困难。知难而退是明智之举。"
+        },
+        {
+          "position": "六四",
+          "text": "乘马班如，求婚媾，往吉无不利。",
+          "interpretation": "骑马盘旋，去求婚，前往吉祥，没有不利。时机到来时，积极行动会有好结果。"
+        },
+        {
+          "position": "九五",
+          "text": "屯其膏，小贞吉，大贞凶。",
+          "interpretation": "囤积膏泽，小事情守正吉祥，大事情守正凶险。小事情可以坚持，大事情需要变通。"
+        },
+        {
+          "position": "上六",
+          "text": "乘马班如，泣血涟如。",
+          "interpretation": "骑马盘旋，哭泣流血。进退两难，处境艰难。需谨慎应对，避免更大损失。"
+        }
+      ],
+      "image": "云雷屯，君子以经纶。",
+      "image_interpretation": "乌云密布雷声震，君子应该经营谋划。初生阶段需要精心规划，打好基础。",
+      "core_meaning": "初生、艰难、酝酿、起步、耐心",
+      "keywords": [
+        "起步",
+        "艰难",
+        "酝酿",
+        "耐心",
+        "准备",
+        "基础"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "山水蒙",
+      "short_name": "蒙卦",
+      "unicode_symbol": "☶☵",
+      "upper_trigram": "艮",
+      "lower_trigram": "坎",
+      "binary": "010001",
+      "judgment": "亨。匪我求童蒙，童蒙求我。初筮告，再三渎，渎则不告。利贞。",
+      "judgment_interpretation": "蒙卦象征启蒙。通达。不是我求童蒙，而是童蒙求我。初次占筮则告知，再三占筮就是亵渎，亵渎则不告知。利于守正。此卦强调启蒙教育的重要性，以及求学者应有的谦逊态度。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "发蒙，利用刑人，用说桎梏，以往吝。",
+          "interpretation": "启发蒙昧，利于用刑罚之人，以此摆脱桎梏，但前往会有困难。启蒙需要规矩，但也要适度。"
+        },
+        {
+          "position": "九二",
+          "text": "包蒙吉，纳妇吉，子克家。",
+          "interpretation": "包容蒙昧则吉祥，娶妻吉祥，儿子能够持家。以包容之心对待初学者，会有好结果。"
+        },
+        {
+          "position": "六三",
+          "text": "勿用取女，见金夫，不有躬，无攸利。",
+          "interpretation": "不要娶这个女子，她见到有钱的男子，就不能保住自身的贞节，没有什么利益。比喻选择老师或导师时，要看重品德而非金钱。"
+        },
+        {
+          "position": "六四",
+          "text": "困蒙，吝。",
+          "interpretation": "困于蒙昧，有困难。缺乏良师指导，陷入困惑。需要主动寻求启蒙。"
+        },
+        {
+          "position": "六五",
+          "text": "童蒙，吉。",
+          "interpretation": "儿童般的蒙昧，吉祥。保持谦逊好学的态度，如同童蒙一般，是最吉祥的。"
+        },
+        {
+          "position": "上九",
+          "text": "击蒙，不利为寇，利御寇。",
+          "interpretation": "打击蒙昧，不利于做强盗，利于抵御强盗。启蒙方法要得当，过于严厉反而会适得其反。"
+        }
+      ],
+      "image": "山下出泉，蒙。君子以果行育德。",
+      "image_interpretation": "山下流出泉水，象征启蒙。君子应该以果敢的行为培育美德。启蒙要果断有力，同时也要涵养品德。",
+      "core_meaning": "启蒙、教育、学习、开悟、谦逊",
+      "keywords": [
+        "学习",
+        "教育",
+        "启蒙",
+        "求知",
+        "成长",
+        "谦逊"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "水天需",
+      "short_name": "需卦",
+      "unicode_symbol": "☵☰",
+      "upper_trigram": "坎",
+      "lower_trigram": "乾",
+      "binary": "111010",
+      "judgment": "有孚，光亨贞吉，利涉大川。",
+      "judgment_interpretation": "需卦象征等待。心怀诚信，光明通达，守正吉祥。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "需于郊，利用恒，无咎。",
+          "interpretation": "在郊外等待，利于恒心，没有灾祸。"
+        },
+        {
+          "position": "九二",
+          "text": "需于沙，小有言，终吉。",
+          "interpretation": "在沙地等待，稍有言语之伤，最终吉祥。"
+        },
+        {
+          "position": "九三",
+          "text": "需于泥，致寇至。",
+          "interpretation": "在泥泞中等待，招致盗寇到来。"
+        },
+        {
+          "position": "六四",
+          "text": "需于血，出自穴。",
+          "interpretation": "在血泊中等待，从洞穴中脱出。"
+        },
+        {
+          "position": "九五",
+          "text": "需于酒食，贞吉。",
+          "interpretation": "在酒食中等待，守正吉祥。"
+        },
+        {
+          "position": "上六",
+          "text": "入于穴，有不速之客三人来，敬之终吉。",
+          "interpretation": "进入洞穴，有三个不速之客到来，恭敬对待他们最终吉祥。"
+        }
+      ],
+      "image": "云上于天，需。君子以饮食宴乐。",
+      "image_interpretation": "云气上升到天上，象征等待。君子应该饮食宴乐，等待时机。",
+      "core_meaning": "等待、耐心、时机、准备",
+      "keywords": [
+        "等待",
+        "耐心",
+        "时机",
+        "准备",
+        "不急躁"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "天水讼",
+      "short_name": "讼卦",
+      "unicode_symbol": "☰☵",
+      "upper_trigram": "乾",
+      "lower_trigram": "坎",
+      "binary": "010111",
+      "judgment": "有孚窒惕，中吉，终凶。利见大人，不利涉大川。",
+      "judgment_interpretation": "讼卦象征争讼。心怀诚信但被窒息警惕。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "不永所事，小有言，终吉。",
+          "interpretation": "不把事情做到底，稍有言语之争，最终吉祥。"
+        },
+        {
+          "position": "九二",
+          "text": "不克讼，归而逋，其邑人三百户无眚。",
+          "interpretation": "争讼不胜，回来逃跑，其邑中三百户没有灾祸。"
+        },
+        {
+          "position": "六三",
+          "text": "食旧德，贞厉，终吉。或从王事，无成。",
+          "interpretation": "享用旧的德业，守正虽有危险但最终吉祥。或者从事王事，不会成功。"
+        },
+        {
+          "position": "九四",
+          "text": "不克讼，复即命渝，安贞吉。",
+          "interpretation": "争讼不胜，回来就命令改变，安于正道则吉祥。"
+        },
+        {
+          "position": "九五",
+          "text": "讼元吉。",
+          "interpretation": "争讼大吉。"
+        },
+        {
+          "position": "上九",
+          "text": "或锡之鞶带，终朝三褫之。",
+          "interpretation": "或者赐予鞶带，一天之内三次被剥夺。"
+        }
+      ],
+      "image": "天与水违行，讼。君子以作事谋始。",
+      "image_interpretation": "天向西转，水向东流，二者相违背，象征争讼。君子应该在做事之初就谋划好。",
+      "core_meaning": "争讼、争议、矛盾、谨慎",
+      "keywords": [
+        "争议",
+        "矛盾",
+        "谨慎",
+        "沟通",
+        "和解"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "地水师",
+      "short_name": "师卦",
+      "unicode_symbol": "☷☵",
+      "upper_trigram": "坤",
+      "lower_trigram": "坎",
+      "binary": "010000",
+      "judgment": "贞丈人吉，无咎。",
+      "judgment_interpretation": "师卦象征军队。守正，有威望的长者吉祥。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "师出以律，否臧凶。",
+          "interpretation": "军队出动要守纪律，纪律不好则凶险。"
+        },
+        {
+          "position": "九二",
+          "text": "在师中吉，无咎，王三锡命。",
+          "interpretation": "在军队中吉祥，没有灾祸，君王三次赐命。"
+        },
+        {
+          "position": "六三",
+          "text": "师或舆尸，凶。",
+          "interpretation": "军队可能载尸而归，凶险。"
+        },
+        {
+          "position": "六四",
+          "text": "师左次，无咎。",
+          "interpretation": "军队撤退驻扎，没有灾祸。"
+        },
+        {
+          "position": "六五",
+          "text": "田有禽，利执言，无咎。长子帅师，弟子舆尸，贞凶。",
+          "interpretation": "田野有禽兽，利于发表言论，没有灾祸。长子统帅军队，弟子载尸而归，守正凶险。"
+        },
+        {
+          "position": "上六",
+          "text": "大君有命，开国承家，小人勿用。",
+          "interpretation": "天子有命令，开国承家，不要任用小人。"
+        }
+      ],
+      "image": "地中有水，师。君子以容民畜众。",
+      "image_interpretation": "地中容纳水，象征军队。君子应该容纳民众，蓄养众人。",
+      "core_meaning": "军队、纪律、统帅、谨慎",
+      "keywords": [
+        "军队",
+        "纪律",
+        "统帅",
+        "谨慎",
+        "组织"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "水地比",
+      "short_name": "比卦",
+      "unicode_symbol": "☵☷",
+      "upper_trigram": "坎",
+      "lower_trigram": "坤",
+      "binary": "000010",
+      "judgment": "吉。原筮元永贞，无咎。不宁方来，后夫凶。",
+      "judgment_interpretation": "比卦象征亲密。吉祥。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "有孚比之，无咎。有孚盈缶，终来有它吉。",
+          "interpretation": "心怀诚信去亲近，没有灾祸。诚信装满瓦器，最终会有意外的吉祥。"
+        },
+        {
+          "position": "六二",
+          "text": "比之自内，贞吉。",
+          "interpretation": "从内部去亲近，守正吉祥。"
+        },
+        {
+          "position": "六三",
+          "text": "比之匪人。",
+          "interpretation": "亲近了不该亲近的人。"
+        },
+        {
+          "position": "六四",
+          "text": "外比之，贞吉。",
+          "interpretation": "向外亲近，守正吉祥。"
+        },
+        {
+          "position": "九五",
+          "text": "显比，王用三驱，失前禽，邑人不诫，吉。",
+          "interpretation": "显明亲近之道，君王用三面围猎，放走前面的禽兽，邑人不会警戒，吉祥。"
+        },
+        {
+          "position": "上六",
+          "text": "比之无首，凶。",
+          "interpretation": "亲近而没有首领，凶险。"
+        }
+      ],
+      "image": "地上有水，比。先王以建万国，亲诸侯。",
+      "image_interpretation": "地上有水，水与地亲近，象征亲密。先王因此建立万国，亲近诸侯。",
+      "core_meaning": "亲密、团结、辅助、合作",
+      "keywords": [
+        "亲密",
+        "团结",
+        "合作",
+        "辅助",
+        "信任"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "风天小畜",
+      "short_name": "小畜卦",
+      "unicode_symbol": "☴☰",
+      "upper_trigram": "巽",
+      "lower_trigram": "乾",
+      "binary": "111011",
+      "judgment": "亨。密云不雨，自我西郊。",
+      "judgment_interpretation": "小畜卦象征小有积蓄。通达。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "天泽履",
+      "short_name": "履卦",
+      "unicode_symbol": "☰☱",
+      "upper_trigram": "乾",
+      "lower_trigram": "兑",
+      "binary": "110111",
+      "judgment": "履虎尾，不咥人，亨。",
+      "judgment_interpretation": "履卦象征践履。踩在老虎尾巴上，老虎不咬人，通达。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "地天泰",
+      "short_name": "泰卦",
+      "unicode_symbol": "☷☰",
+      "upper_trigram": "坤",
+      "lower_trigram": "乾",
+      "binary": "111000",
+      "judgment": "小往大来，吉亨。",
+      "judgment_interpretation": "泰卦象征通泰。弱小者离去，强大者到来，吉祥通达。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "天地否",
+      "short_name": "否卦",
+      "unicode_symbol": "☰☷",
+      "upper_trigram": "乾",
+      "lower_trigram": "坤",
+      "binary": "000111",
+      "judgment": "否之匪人，不利君子贞，大往小来。",
+      "judgment_interpretation": "否卦象征闭塞。闭塞之时非人道。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "天火同人",
+      "short_name": "同人卦",
+      "unicode_symbol": "☰☲",
+      "upper_trigram": "乾",
+      "lower_trigram": "离",
+      "binary": "101111",
+      "judgment": "同人于野，亨，利涉大川，利君子贞。",
+      "judgment_interpretation": "同人卦象征与人和同。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "火天大有",
+      "short_name": "大有卦",
+      "unicode_symbol": "☲☰",
+      "upper_trigram": "离",
+      "lower_trigram": "乾",
+      "binary": "111101",
+      "judgment": "元亨。",
+      "judgment_interpretation": "大有卦象征大有所获。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "地山谦",
+      "short_name": "谦卦",
+      "unicode_symbol": "☷☶",
+      "upper_trigram": "坤",
+      "lower_trigram": "艮",
+      "binary": "001000",
+      "judgment": "亨，君子有终。",
+      "judgment_interpretation": "谦卦象征谦逊。通达，君子有好的结果。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "雷地豫",
+      "short_name": "豫卦",
+      "unicode_symbol": "☳☷",
+      "upper_trigram": "震",
+      "lower_trigram": "坤",
+      "binary": "000100",
+      "judgment": "利建侯行师。",
+      "judgment_interpretation": "豫卦象征欢乐。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "泽雷随",
+      "short_name": "随卦",
+      "unicode_symbol": "☱☳",
+      "upper_trigram": "兑",
+      "lower_trigram": "震",
+      "binary": "100110",
+      "judgment": "元亨利贞，无咎。",
+      "judgment_interpretation": "随卦象征随从。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "山风蛊",
+      "short_name": "蛊卦",
+      "unicode_symbol": "☶☴",
+      "upper_trigram": "艮",
+      "lower_trigram": "巽",
+      "binary": "011001",
+      "judgment": "元亨，利涉大川。先甲三日，后甲三日。",
+      "judgment_interpretation": "蛊卦象征蛊乱。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "地泽临",
+      "short_name": "临卦",
+      "unicode_symbol": "☷☱",
+      "upper_trigram": "坤",
+      "lower_trigram": "兑",
+      "binary": "110000",
+      "judgment": "元亨利贞。至于八月有凶。",
+      "judgment_interpretation": "临卦象征临近。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "风地观",
+      "short_name": "观卦",
+      "unicode_symbol": "☴☷",
+      "upper_trigram": "巽",
+      "lower_trigram": "坤",
+      "binary": "000011",
+      "judgment": "盥而不荐，有孚颙若。",
+      "judgment_interpretation": "观卦象征观察。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "火雷噬嗑",
+      "short_name": "噬嗑卦",
+      "unicode_symbol": "☲☳",
+      "upper_trigram": "离",
+      "lower_trigram": "震",
+      "binary": "100101",
+      "judgment": "亨。利用狱。",
+      "judgment_interpretation": "噬嗑卦象征咬合。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "山火贲",
+      "short_name": "贲卦",
+      "unicode_symbol": "☶☲",
+      "upper_trigram": "艮",
+      "lower_trigram": "离",
+      "binary": "101001",
+      "judgment": "亨。小利有攸往。",
+      "judgment_interpretation": "贲卦象征装饰。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "山地剥",
+      "short_name": "剥卦",
+      "unicode_symbol": "☶☷",
+      "upper_trigram": "艮",
+      "lower_trigram": "坤",
+      "binary": "000001",
+      "judgment": "不利有攸往。",
+      "judgment_interpretation": "剥卦象征剥落。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "地雷复",
+      "short_name": "复卦",
+      "unicode_symbol": "☷☳",
+      "upper_trigram": "坤",
+      "lower_trigram": "震",
+      "binary": "100000",
+      "judgment": "亨。出入无疾，朋来无咎。反复其道，七日来复。利有攸往。",
+      "judgment_interpretation": "复卦象征回复。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "天雷无妄",
+      "short_name": "无妄卦",
+      "unicode_symbol": "☰☳",
+      "upper_trigram": "乾",
+      "lower_trigram": "震",
+      "binary": "100111",
+      "judgment": "元亨利贞。其匪正有眚，不利有攸往。",
+      "judgment_interpretation": "无妄卦象征无妄。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "山天大畜",
+      "short_name": "大畜卦",
+      "unicode_symbol": "☶☰",
+      "upper_trigram": "艮",
+      "lower_trigram": "乾",
+      "binary": "111001",
+      "judgment": "利贞。不家食吉。利涉大川。",
+      "judgment_interpretation": "大畜卦象征大有积蓄。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "山雷颐",
+      "short_name": "颐卦",
+      "unicode_symbol": "☶☳",
+      "upper_trigram": "艮",
+      "lower_trigram": "震",
+      "binary": "100001",
+      "judgment": "贞吉。观颐，自求口实。",
+      "judgment_interpretation": "颐卦象征颐养。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "泽风大过",
+      "short_name": "大过卦",
+      "unicode_symbol": "☱☴",
+      "upper_trigram": "兑",
+      "lower_trigram": "巽",
+      "binary": "011110",
+      "judgment": "栋桡，利有攸往，亨。",
+      "judgment_interpretation": "大过卦象征大为过当。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "坎为水",
+      "short_name": "坎卦",
+      "unicode_symbol": "☵☵",
+      "upper_trigram": "坎",
+      "lower_trigram": "坎",
+      "binary": "010010",
+      "judgment": "习坎，有孚维心，亨。行有尚。",
+      "judgment_interpretation": "坎卦象征陷坑。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "离为火",
+      "short_name": "离卦",
+      "unicode_symbol": "☲☲",
+      "upper_trigram": "离",
+      "lower_trigram": "离",
+      "binary": "101101",
+      "judgment": "利贞，亨。畜牝牛吉。",
+      "judgment_interpretation": "离卦象征附着。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "泽山咸",
+      "short_name": "咸卦",
+      "unicode_symbol": "☱☶",
+      "upper_trigram": "兑",
+      "lower_trigram": "艮",
+      "binary": "001110",
+      "judgment": "亨，利贞。取女吉。",
+      "judgment_interpretation": "咸卦象征感应。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "雷风恒",
+      "short_name": "恒卦",
+      "unicode_symbol": "☳☴",
+      "upper_trigram": "震",
+      "lower_trigram": "巽",
+      "binary": "011100",
+      "judgment": "亨，无咎，利贞。利有攸往。",
+      "judgment_interpretation": "恒卦象征恒久。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "天山遁",
+      "short_name": "遁卦",
+      "unicode_symbol": "☰☶",
+      "upper_trigram": "乾",
+      "lower_trigram": "艮",
+      "binary": "001111",
+      "judgment": "亨，小利贞。",
+      "judgment_interpretation": "遁卦象征退避。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "雷天大壮",
+      "short_name": "大壮卦",
+      "unicode_symbol": "☳☰",
+      "upper_trigram": "震",
+      "lower_trigram": "乾",
+      "binary": "111100",
+      "judgment": "利贞。",
+      "judgment_interpretation": "大壮卦象征大为强盛。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "火地晋",
+      "short_name": "晋卦",
+      "unicode_symbol": "☲☷",
+      "upper_trigram": "离",
+      "lower_trigram": "坤",
+      "binary": "000101",
+      "judgment": "康侯用锡马蕃庶，昼日三接。",
+      "judgment_interpretation": "晋卦象征进升。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "地火明夷",
+      "short_name": "明夷卦",
+      "unicode_symbol": "☷☲",
+      "upper_trigram": "坤",
+      "lower_trigram": "离",
+      "binary": "101000",
+      "judgment": "利艰贞。",
+      "judgment_interpretation": "明夷卦象征光明受损。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "风火家人",
+      "short_name": "家人卦",
+      "unicode_symbol": "☴☲",
+      "upper_trigram": "巽",
+      "lower_trigram": "离",
+      "binary": "101011",
+      "judgment": "利女贞。",
+      "judgment_interpretation": "家人卦象征家庭。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "火泽睽",
+      "short_name": "睽卦",
+      "unicode_symbol": "☲☱",
+      "upper_trigram": "离",
+      "lower_trigram": "兑",
+      "binary": "110101",
+      "judgment": "小事吉。",
+      "judgment_interpretation": "睽卦象征乖离。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "水山蹇",
+      "short_name": "蹇卦",
+      "unicode_symbol": "☵☶",
+      "upper_trigram": "坎",
+      "lower_trigram": "艮",
+      "binary": "001010",
+      "judgment": "利西南，不利东北。利见大人，贞吉。",
+      "judgment_interpretation": "蹇卦象征艰难。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "雷水解",
+      "short_name": "解卦",
+      "unicode_symbol": "☳☵",
+      "upper_trigram": "震",
+      "lower_trigram": "坎",
+      "binary": "010100",
+      "judgment": "利西南。无所往，其来复吉。有攸往，夙吉。",
+      "judgment_interpretation": "解卦象征解脱。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "山泽损",
+      "short_name": "损卦",
+      "unicode_symbol": "☶☱",
+      "upper_trigram": "艮",
+      "lower_trigram": "兑",
+      "binary": "110001",
+      "judgment": "有孚，元吉，无咎。可贞，利有攸往。曷之用？二簋可用享。",
+      "judgment_interpretation": "损卦象征减损。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "风雷益",
+      "short_name": "益卦",
+      "unicode_symbol": "☴☳",
+      "upper_trigram": "巽",
+      "lower_trigram": "震",
+      "binary": "100011",
+      "judgment": "利有攸往，利涉大川。",
+      "judgment_interpretation": "益卦象征增益。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "泽天夬",
+      "short_name": "夬卦",
+      "unicode_symbol": "☱☰",
+      "upper_trigram": "兑",
+      "lower_trigram": "乾",
+      "binary": "111110",
+      "judgment": "扬于王庭，孚号有厉。告自邑，不利即戎。利有攸往。",
+      "judgment_interpretation": "夬卦象征决断。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "天风姤",
+      "short_name": "姤卦",
+      "unicode_symbol": "☰☴",
+      "upper_trigram": "乾",
+      "lower_trigram": "巽",
+      "binary": "011111",
+      "judgment": "女壮，勿用取女。",
+      "judgment_interpretation": "姤卦象征相遇。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "泽地萃",
+      "short_name": "萃卦",
+      "unicode_symbol": "☱☷",
+      "upper_trigram": "兑",
+      "lower_trigram": "坤",
+      "binary": "000110",
+      "judgment": "亨。王假有庙。利见大人，亨，利贞。用大牲吉，利有攸往。",
+      "judgment_interpretation": "萃卦象征聚集。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "地风升",
+      "short_name": "升卦",
+      "unicode_symbol": "☷☴",
+      "upper_trigram": "坤",
+      "lower_trigram": "巽",
+      "binary": "011000",
+      "judgment": "元亨。用见大人，勿恤。南征吉。",
+      "judgment_interpretation": "升卦象征上升。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "泽水困",
+      "short_name": "困卦",
+      "unicode_symbol": "☱☵",
+      "upper_trigram": "兑",
+      "lower_trigram": "坎",
+      "binary": "010110",
+      "judgment": "亨，贞大人吉，无咎。有言不信。",
+      "judgment_interpretation": "困卦象征困顿。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "水风井",
+      "short_name": "井卦",
+      "unicode_symbol": "☵☴",
+      "upper_trigram": "坎",
+      "lower_trigram": "巽",
+      "binary": "011010",
+      "judgment": "改邑不改井，无丧无得。往来井井。汔至亦未繘井，羸其瓶，凶。",
+      "judgment_interpretation": "井卦象征水井。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "泽火革",
+      "short_name": "革卦",
+      "unicode_symbol": "☱☲",
+      "upper_trigram": "兑",
+      "lower_trigram": "离",
+      "binary": "101110",
+      "judgment": "己日乃孚，元亨利贞。悔亡。",
+      "judgment_interpretation": "革卦象征变革。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "火风鼎",
+      "short_name": "鼎卦",
+      "unicode_symbol": "☲☴",
+      "upper_trigram": "离",
+      "lower_trigram": "巽",
+      "binary": "011101",
+      "judgment": "元吉亨。",
+      "judgment_interpretation": "鼎卦象征鼎器。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "震为雷",
+      "short_name": "震卦",
+      "unicode_symbol": "☳☳",
+      "upper_trigram": "震",
+      "lower_trigram": "震",
+      "binary": "100100",
+      "judgment": "亨。震来虩虩，笑言哑哑。震惊百里，不丧匕鬯。",
+      "judgment_interpretation": "震卦象征震动。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "艮为山",
+      "short_name": "艮卦",
+      "unicode_symbol": "☶☶",
+      "upper_trigram": "艮",
+      "lower_trigram": "艮",
+      "binary": "001001",
+      "judgment": "艮其背，不获其身。行其庭，不见其人。无咎。",
+      "judgment_interpretation": "艮卦象征静止。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "风山渐",
+      "short_name": "渐卦",
+      "unicode_symbol": "☴☶",
+      "upper_trigram": "巽",
+      "lower_trigram": "艮",
+      "binary": "001011",
+      "judgment": "女归吉，利贞。",
+      "judgment_interpretation": "渐卦象征渐进。",
+      "yao_ci": [
+        {
+          "position": "初X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "二X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "三X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "四X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "五X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        },
+        {
+          "position": "上X",
+          "text": "（需要补充）",
+          "interpretation": "（需要补充）"
+        }
+      ],
+      "image": "（需要补充）",
+      "image_interpretation": "（需要补充）",
+      "core_meaning": "（需要补充）",
+      "keywords": [
+        "（需要补充）"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "雷泽归妹",
+      "short_name": "归妹卦",
+      "unicode_symbol": "☳☱",
+      "upper_trigram": "震",
+      "lower_trigram": "兑",
+      "binary": "110100",
+      "judgment": "征凶，无攸利。",
+      "judgment_interpretation": "归妹卦象征嫁妹。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "归妹以娣。跛能履，征吉。",
+          "interpretation": "嫁妹作为娣妾。跛脚能走路，出征吉祥。"
+        },
+        {
+          "position": "九二",
+          "text": "眇能视，利幽人之贞。",
+          "interpretation": "一只眼能看，利于幽隐之人的守正。"
+        },
+        {
+          "position": "六三",
+          "text": "归妹以须，反归以娣。",
+          "interpretation": "嫁妹作为陪嫁，反而回来作为娣妾。"
+        },
+        {
+          "position": "九四",
+          "text": "归妹愆期，迟归有时。",
+          "interpretation": "嫁妹延误期限，迟嫁有时间。"
+        },
+        {
+          "position": "六五",
+          "text": "帝乙归妹，其君之袂不如其娣之袂良。月几望，吉。",
+          "interpretation": "帝乙嫁妹，她的君主的衣袖不如她娣妾的衣袖好。月亮接近满月，吉祥。"
+        },
+        {
+          "position": "上六",
+          "text": "女承筐无实，士刲羊无血。无攸利。",
+          "interpretation": "女子捧着筐子没有实物，男子刺羊没有血。没有什么利益。"
+        }
+      ],
+      "image": "泽上有雷，归妹。君子以永终知敝。",
+      "image_interpretation": "泽水上有雷，象征嫁妹。君子因此永终知道敝坏。",
+      "core_meaning": "嫁妹、婚姻、配合、终始",
+      "keywords": [
+        "嫁妹",
+        "婚姻",
+        "配合",
+        "终始",
+        "警惕"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "雷火丰",
+      "short_name": "丰卦",
+      "unicode_symbol": "☳☲",
+      "upper_trigram": "震",
+      "lower_trigram": "离",
+      "binary": "101100",
+      "judgment": "亨。王假之，勿忧。宜日中。",
+      "judgment_interpretation": "丰卦象征丰大。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "遇其配主，虽旬无咎。往有尚。",
+          "interpretation": "遇到他的配主，虽然十天没有灾祸。前往有崇尚。"
+        },
+        {
+          "position": "六二",
+          "text": "丰其蔀，日中见斗。往得疑疾。有孚发若，吉。",
+          "interpretation": "丰大它的遮蔽，日中看见北斗。前往得到怀疑的疾病。有诚信发散的样子，吉祥。"
+        },
+        {
+          "position": "九三",
+          "text": "丰其沛，日中见沫。折其右肱，无咎。",
+          "interpretation": "丰大它的幡幔，日中看见微星。折断他的右臂，没有灾祸。"
+        },
+        {
+          "position": "九四",
+          "text": "丰其蔀，日中见斗。遇其夷主，吉。",
+          "interpretation": "丰大它的遮蔽，日中看见北斗。遇到他的夷主，吉祥。"
+        },
+        {
+          "position": "六五",
+          "text": "来章，有庆誉。吉。",
+          "interpretation": "来美文，有喜庆荣誉。吉祥。"
+        },
+        {
+          "position": "上六",
+          "text": "丰其屋，蔀其家。窥其户，阒其无人。三岁不觌，凶。",
+          "interpretation": "丰大他的房屋，遮蔽他的家。窥视他的门户，寂静没有人。三年不见人，凶险。"
+        }
+      ],
+      "image": "雷电皆至，丰。君子以折狱致刑。",
+      "image_interpretation": "雷声电光都到来，象征丰大。君子因此断决狱讼致用刑罚。",
+      "core_meaning": "丰大、盛大、光明、警惕",
+      "keywords": [
+        "丰大",
+        "盛大",
+        "光明",
+        "警惕",
+        "满招损"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "火山旅",
+      "short_name": "旅卦",
+      "unicode_symbol": "☲☶",
+      "upper_trigram": "离",
+      "lower_trigram": "艮",
+      "binary": "001101",
+      "judgment": "小亨。旅贞吉。",
+      "judgment_interpretation": "旅卦象征旅行。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "旅琐琐，斯其所取灾。",
+          "interpretation": "旅行猥琐的样子，这是他所取来的灾祸。"
+        },
+        {
+          "position": "六二",
+          "text": "旅即次，怀其资。得童仆，贞。",
+          "interpretation": "旅行就到馆舍，怀藏着他的资财。得到童仆，守正。"
+        },
+        {
+          "position": "九三",
+          "text": "旅焚其次，丧其童仆。贞厉。",
+          "interpretation": "旅行焚烧他的馆舍，丧失他的童仆。守正危险。"
+        },
+        {
+          "position": "九四",
+          "text": "旅于处，得其资斧。我心不快。",
+          "interpretation": "旅行在于处所，得到他的资财斧头。我的心不快活。"
+        },
+        {
+          "position": "六五",
+          "text": "射雉，一矢亡。终以誉命。",
+          "interpretation": "射野鸡，一支箭丢失。最终以荣誉命令。"
+        },
+        {
+          "position": "上九",
+          "text": "鸟焚其巢，旅人先笑后号咷。丧牛于易，凶。",
+          "interpretation": "鸟焚烧它的巢穴，旅人先笑后号啕大哭。在边界丧失牛，凶险。"
+        }
+      ],
+      "image": "山上有火，旅。君子以明慎用刑而不留狱。",
+      "image_interpretation": "山上有火，象征旅行。君子因此明察谨慎使用刑罚而不滞留狱讼。",
+      "core_meaning": "旅行、漂泊、客居、谨慎",
+      "keywords": [
+        "旅行",
+        "漂泊",
+        "客居",
+        "谨慎",
+        "适应"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "巽为风",
+      "short_name": "巽卦",
+      "unicode_symbol": "☴☴",
+      "upper_trigram": "巽",
+      "lower_trigram": "巽",
+      "binary": "011011",
+      "judgment": "小亨。利有攸往，利见大人。",
+      "judgment_interpretation": "巽卦象征顺从。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "进退，利武人之贞。",
+          "interpretation": "进退，利于武人的守正。"
+        },
+        {
+          "position": "九二",
+          "text": "巽在床下，用史巫纷若。吉，无咎。",
+          "interpretation": "顺从在床下，使用史巫纷多的样子。吉祥，没有灾祸。"
+        },
+        {
+          "position": "九三",
+          "text": "频巽，吝。",
+          "interpretation": "频繁地顺从，有困难。"
+        },
+        {
+          "position": "六四",
+          "text": "悔亡，田获三品。",
+          "interpretation": "悔恨消失，田猎获得三品。"
+        },
+        {
+          "position": "九五",
+          "text": "贞吉，悔亡，无不利。无初有终。先庚三日，后庚三日。吉。",
+          "interpretation": "守正吉祥，悔恨消失，没有不利。没有开始有结局。先庚三日，后庚三日。吉祥。"
+        },
+        {
+          "position": "上九",
+          "text": "巽在床下，丧其资斧。贞凶。",
+          "interpretation": "顺从在床下，丧失他的资财斧头。守正凶险。"
+        }
+      ],
+      "image": "随风，巽。君子以申命行事。",
+      "image_interpretation": "随风相从，象征顺从。君子因此申明命令施行事务。",
+      "core_meaning": "顺从、温和、渗透、执行",
+      "keywords": [
+        "顺从",
+        "温和",
+        "渗透",
+        "执行",
+        "柔顺"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "兑为泽",
+      "short_name": "兑卦",
+      "unicode_symbol": "☱☱",
+      "upper_trigram": "兑",
+      "lower_trigram": "兑",
+      "binary": "110110",
+      "judgment": "亨，利贞。",
+      "judgment_interpretation": "兑卦象征喜悦。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "和兑，吉。",
+          "interpretation": "和悦，吉祥。"
+        },
+        {
+          "position": "九二",
+          "text": "孚兑，吉。悔亡。",
+          "interpretation": "诚信喜悦，吉祥。悔恨消失。"
+        },
+        {
+          "position": "六三",
+          "text": "来兑，凶。",
+          "interpretation": "来献喜悦，凶险。"
+        },
+        {
+          "position": "九四",
+          "text": "商兑未宁，介疾有喜。",
+          "interpretation": "商量喜悦未安宁，隔绝疾病有喜悦。"
+        },
+        {
+          "position": "九五",
+          "text": "孚于剥，有厉。",
+          "interpretation": "诚信于剥落，有危险。"
+        },
+        {
+          "position": "上六",
+          "text": "引兑。",
+          "interpretation": "引荐喜悦。"
+        }
+      ],
+      "image": "丽泽，兑。君子以朋友讲习。",
+      "image_interpretation": "两泽相丽，象征喜悦。君子因此与朋友讲说研习。",
+      "core_meaning": "喜悦、和悦、交流、分享",
+      "keywords": [
+        "喜悦",
+        "和悦",
+        "交流",
+        "分享",
+        "友谊"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "风水涣",
+      "short_name": "涣卦",
+      "unicode_symbol": "☴☵",
+      "upper_trigram": "巽",
+      "lower_trigram": "坎",
+      "binary": "010011",
+      "judgment": "亨。王假有庙。利涉大川，利贞。",
+      "judgment_interpretation": "涣卦象征涣散。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "用拯马壮，吉。",
+          "interpretation": "用来拯救马匹强壮，吉祥。"
+        },
+        {
+          "position": "九二",
+          "text": "涣奔其机，悔亡。",
+          "interpretation": "涣散奔向他的几案，悔恨消失。"
+        },
+        {
+          "position": "六三",
+          "text": "涣其躬，无悔。",
+          "interpretation": "涣散他的身体，没有悔恨。"
+        },
+        {
+          "position": "六四",
+          "text": "涣其群，元吉。涣有丘，匪夷所思。",
+          "interpretation": "涣散他的群类，大吉。涣散有山丘，不是平常所能想到的。"
+        },
+        {
+          "position": "九五",
+          "text": "涣汗其大号，涣王居，无咎。",
+          "interpretation": "涣散如出汗他的重大号令，涣散君王居处，没有灾祸。"
+        },
+        {
+          "position": "上九",
+          "text": "涣其血，去逖出，无咎。",
+          "interpretation": "涣散他的血，去除远离脱出，没有灾祸。"
+        }
+      ],
+      "image": "风行水上，涣。先王以享于帝，立庙。",
+      "image_interpretation": "风行于水上，象征涣散。先王因此祭祀天帝，建立宗庙。",
+      "core_meaning": "涣散、流通、化解、重聚",
+      "keywords": [
+        "涣散",
+        "流通",
+        "化解",
+        "重聚",
+        "祭祀"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "水泽节",
+      "short_name": "节卦",
+      "unicode_symbol": "☵☱",
+      "upper_trigram": "坎",
+      "lower_trigram": "兑",
+      "binary": "110010",
+      "judgment": "亨。苦节不可贞。",
+      "judgment_interpretation": "节卦象征节制。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "不出户庭，无咎。",
+          "interpretation": "不走出户庭，没有灾祸。"
+        },
+        {
+          "position": "九二",
+          "text": "不出门庭，凶。",
+          "interpretation": "不走出门庭，凶险。"
+        },
+        {
+          "position": "六三",
+          "text": "不节若，则嗟若。无咎。",
+          "interpretation": "不节制啊，那么就嗟叹啊。没有灾祸。"
+        },
+        {
+          "position": "六四",
+          "text": "安节，亨。",
+          "interpretation": "安于节制，通达。"
+        },
+        {
+          "position": "九五",
+          "text": "甘节，吉。往有尚。",
+          "interpretation": "甘美地节制，吉祥。前往有崇尚。"
+        },
+        {
+          "position": "上六",
+          "text": "苦节，贞凶。悔亡。",
+          "interpretation": "苦苦节制，守正凶险。悔恨消失。"
+        }
+      ],
+      "image": "泽上有水，节。君子以制数度，议德行。",
+      "image_interpretation": "泽水上有水，象征节制。君子因此制定数度，评议德行。",
+      "core_meaning": "节制、节约、制度、适度",
+      "keywords": [
+        "节制",
+        "节约",
+        "制度",
+        "适度",
+        "规范"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "风泽中孚",
+      "short_name": "中孚卦",
+      "unicode_symbol": "☴☱",
+      "upper_trigram": "巽",
+      "lower_trigram": "兑",
+      "binary": "110011",
+      "judgment": "豚鱼吉，利涉大川，利贞。",
+      "judgment_interpretation": "中孚卦象征心中诚信。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "虞吉，有它不燕。",
+          "interpretation": "安度吉祥，有他物不宴安。"
+        },
+        {
+          "position": "九二",
+          "text": "鸣鹤在阴，其子和之。我有好爵，吾与尔靡之。",
+          "interpretation": "鸣叫的鹤在树荫下，它的儿子应和它。我有好酒爵，我和你共享它。"
+        },
+        {
+          "position": "六三",
+          "text": "得敌，或鼓或罢，或泣或歌。",
+          "interpretation": "得到敌人，或者击鼓或者停止，或者哭泣或者歌唱。"
+        },
+        {
+          "position": "六四",
+          "text": "月几望，马匹亡，无咎。",
+          "interpretation": "月亮接近满月，马匹丢失，没有灾祸。"
+        },
+        {
+          "position": "九五",
+          "text": "有孚挛如，无咎。",
+          "interpretation": "有诚信相连的样子，没有灾祸。"
+        },
+        {
+          "position": "上九",
+          "text": "翰音登于天，贞凶。",
+          "interpretation": "鸡鸣之声登到天上，守正凶险。"
+        }
+      ],
+      "image": "泽上有风，中孚。君子以议狱缓死。",
+      "image_interpretation": "泽水上有风，象征心中诚信。君子因此评议狱讼宽缓死刑。",
+      "core_meaning": "诚信、感应、和谐、感通",
+      "keywords": [
+        "诚信",
+        "感应",
+        "和谐",
+        "感通",
+        "真心"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "雷山小过",
+      "short_name": "小过卦",
+      "unicode_symbol": "☳☶",
+      "upper_trigram": "震",
+      "lower_trigram": "艮",
+      "binary": "001100",
+      "judgment": "亨，利贞。可小事，不可大事。飞鸟遗之音，不宜上宜下。大吉。",
+      "judgment_interpretation": "小过卦象征小有越过。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "飞鸟以凶。",
+          "interpretation": "飞鸟因此凶险。"
+        },
+        {
+          "position": "六二",
+          "text": "过其祖，遇其妣。不及其君，遇其臣。无咎。",
+          "interpretation": "越过他的祖父，遇到他的祖母。来不及他的君王，遇到他的臣子。没有灾祸。"
+        },
+        {
+          "position": "九三",
+          "text": "弗过防之，从或戕之。凶。",
+          "interpretation": "不要越过防备它，跟从或许戕害它。凶险。"
+        },
+        {
+          "position": "九四",
+          "text": "无咎。弗过遇之，往厉必戒。勿用永贞。",
+          "interpretation": "没有灾祸。不要越过遇到它，前往危险必须警戒。不要使用永远守正。"
+        },
+        {
+          "position": "六五",
+          "text": "密云不雨，自我西郊。公弋取彼在穴。",
+          "interpretation": "密云不降雨，从我西边的郊野。公侯用箭射取那在洞穴中。"
+        },
+        {
+          "position": "上六",
+          "text": "弗遇过之，飞鸟离之。凶，是谓灾祸。",
+          "interpretation": "没有遇到而越过它，飞鸟遭到罗网。凶险，这叫做灾祸。"
+        }
+      ],
+      "image": "山上有雷，小过。君子以行过乎恭，丧过乎哀，用过乎俭。",
+      "image_interpretation": "山上有雷，象征小有越过。君子因此行为过于恭敬，丧事过于悲哀，用度过于节俭。",
+      "core_meaning": "小过、越过、谨慎、适度",
+      "keywords": [
+        "小过",
+        "越过",
+        "谨慎",
+        "适度",
+        "收敛"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "水火既济",
+      "short_name": "既济卦",
+      "unicode_symbol": "☵☲",
+      "upper_trigram": "坎",
+      "lower_trigram": "离",
+      "binary": "101010",
+      "judgment": "亨小，利贞。初吉终乱。",
+      "judgment_interpretation": "既济卦象征已经成功。",
+      "yao_ci": [
+        {
+          "position": "初九",
+          "text": "曳其轮，濡其尾。无咎。",
+          "interpretation": "拖曳他的车轮，沾湿他的尾巴。没有灾祸。"
+        },
+        {
+          "position": "六二",
+          "text": "妇丧其茀，勿逐，七日得。",
+          "interpretation": "妇人丧失她的蔽膝，不要追赶，七天得到。"
+        },
+        {
+          "position": "九三",
+          "text": "高宗伐鬼方，三年克之。小人勿用。",
+          "interpretation": "高宗讨伐鬼方，三年攻克它。小人不要使用。"
+        },
+        {
+          "position": "六四",
+          "text": "繻有衣袽，终日戒。",
+          "interpretation": "濡湿有破衣，整日警戒。"
+        },
+        {
+          "position": "九五",
+          "text": "东邻杀牛，不如西邻之禴祭，实受其福。",
+          "interpretation": "东邻杀牛祭祀，不如西邻的禴祭，实在承受他的福泽。"
+        },
+        {
+          "position": "上六",
+          "text": "濡其首，厉。",
+          "interpretation": "沾湿他的头，危险。"
+        }
+      ],
+      "image": "水在火上，既济。君子以思患而豫防之。",
+      "image_interpretation": "水在火上，象征已经成功。君子因此思考祸患而预先防备它。",
+      "core_meaning": "既济、成功、完成、警惕",
+      "keywords": [
+        "既济",
+        "成功",
+        "完成",
+        "警惕",
+        "防患"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "火水未济",
+      "short_name": "未济卦",
+      "unicode_symbol": "☲☵",
+      "upper_trigram": "离",
+      "lower_trigram": "坎",
+      "binary": "010101",
+      "judgment": "亨。小狐汔济，濡其尾。无攸利。",
+      "judgment_interpretation": "未济卦象征尚未成功。",
+      "yao_ci": [
+        {
+          "position": "初六",
+          "text": "濡其尾，吝。",
+          "interpretation": "沾湿它的尾巴，有困难。"
+        },
+        {
+          "position": "九二",
+          "text": "曳其轮，贞吉。",
+          "interpretation": "拖曳他的车轮，守正吉祥。"
+        },
+        {
+          "position": "六三",
+          "text": "未济，征凶。利涉大川。",
+          "interpretation": "尚未成功，出征凶险。利于涉过大河。"
+        },
+        {
+          "position": "九四",
+          "text": "贞吉，悔亡。震用伐鬼方，三年有赏于大国。",
+          "interpretation": "守正吉祥，悔恨消失。震动用来讨伐鬼方，三年有赏于大国。"
+        },
+        {
+          "position": "六五",
+          "text": "贞吉，无悔。君子之光，有孚吉。",
+          "interpretation": "守正吉祥，没有悔恨。君子的光辉，有诚信吉祥。"
+        },
+        {
+          "position": "上九",
+          "text": "有孚于饮酒，无咎。濡其首，有孚失是。",
+          "interpretation": "有诚信于饮酒，没有灾祸。沾湿他的头，有诚信失去这个。"
+        }
+      ],
+      "image": "火在水上，未济。君子以慎辨物居方。",
+      "image_interpretation": "火在水上，象征尚未成功。君子因此谨慎辨别物类安居方位。",
+      "core_meaning": "未济、未完成、过渡、希望",
+      "keywords": [
+        "未济",
+        "未完成",
+        "过渡",
+        "希望",
+        "谨慎"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "name": "易经六十四卦数据库",
+    "version": "1.0",
+    "description": "包含《周易》六十四卦的完整信息，适用于算卦小程序",
+    "source": "基于王弼注本《周易》整理",
+    "fields": {
+      "id": "卦序（1-64）",
+      "name": "卦名",
+      "unicode_symbol": "卦象Unicode符号（上卦+下卦）",
+      "upper_trigram": "上卦（外卦）",
+      "lower_trigram": "下卦（内卦）",
+      "binary": "二进制表示（阳=1，阴=0，从下往上）",
+      "judgment": "卦辞",
+      "judgment_interpretation": "卦辞白话解读",
+      "yao_ci": "爻辞（初爻到上爻）",
+      "image": "象传",
+      "image_interpretation": "象传白话解读",
+      "core_meaning": "核心含义（现代解读）",
+      "keywords": "关键词"
+    }
+  },
+  "trigrams": {
+    "☰": {"name": "乾", "nature": "天", "attribute": "健", "binary": "111"},
+    "☱": {"name": "兑", "nature": "泽", "attribute": "悦", "binary": "110"},
+    "☲": {"name": "离", "nature": "火", "attribute": "丽", "binary": "101"},
+    "☳": {"name": "震", "nature": "雷", "attribute": "动", "binary": "100"},
+    "☴": {"name": "巽", "nature": "风", "attribute": "入", "binary": "011"},
+    "☵": {"name": "坎", "nature": "水", "attribute": "陷", "binary": "010"},
+    "☶": {"name": "艮", "nature": "山", "attribute": "止", "binary": "001"},
+    "☷": {"name": "坤", "nature": "地", "attribute": "顺", "binary": "000"}
+  },
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾为天",
+      "short_name": "乾卦",
+      "unicode_symbol": "☰☰",
+      "upper_trigram": "乾",
+      "lower_trigram": "乾",
+      "binary": "111111",
+      "judgment": "元亨利贞。",
+      "judgment_interpretation": "乾卦象征天，代表创始、通达、适宜、正固。这是纯阳之卦，寓意强盛和进取。",
+      "yao_ci": [
+        {"position": "初九", "text": "潜龙勿用。", "interpretation": "龙潜伏在水中，暂时不要行动。"},
+        {"position": "九二", "text": "见龙在田，利见大人。", "interpretation": "龙出现在田野，有利于见到有德行的人。"},
+        {"position": "九三", "text": "君子终日乾乾，夕惕若厉，无咎。", "interpretation": "君子整天勤奋努力，晚上也警惕谨慎，即使有危险也无灾祸。"},
+        {"position": "九四", "text": "或跃在渊，无咎。", "interpretation": "或者跃起或者深陷深渊，没有灾祸。"},
+        {"position": "九五", "text": "飞龙在天，利见大人。", "interpretation": "龙飞在天空中，有利于见到有德行的人。"},
+        {"position": "上九", "text": "亢龙有悔。", "interpretation": "龙飞得太高，会有悔恨。"}
+      ],
+      "image": "天行健，君子以自强不息。",
+      "image_interpretation": "天道运行刚健有力，君子应该效法天道，自强不息。",
+      "core_meaning": "创始、进取、刚健、成功",
+      "keywords": ["成功", "进取", "创始", "刚健", "领导力"]
+    },
+    {
+      "id": 2,
+      "name": "坤为地",
+      "short_name": "坤卦",
+      "unicode_symbol": "☷☷",
+      "upper_trigram": "坤",
+      "lower_trigram": "坤",
+      "binary": "000000",
+      "judgment": "元亨，利牝马之贞。君子有攸往，先迷后得主，利西南得朋，东北丧朋。安贞吉。",
+      "judgment_interpretation": "坤卦象征地，代表柔顺、包容、承载。利于像母马一样坚守正道。君子有所往，起初会迷失方向，后来会找到主人。往西南方会得到朋友，往东北方会失去朋友。安于正道则吉祥。",
+      "yao_ci": [
+        {"position": "初六", "text": "履霜，坚冰至。", "interpretation": "踩到霜，就知道坚冰快要到了。比喻见微知著。"},
+        {"position": "六二", "text": "直方大，不习无不利。", "interpretation": "正直、端方、大气，不学习也没有不利。"},
+        {"position": "六三", "text": "含章可贞，或从王事，无成有终。", "interpretation": "蕴含美德可以坚守正道，或者从事王事，虽然不成功但有好结果。"},
+        {"position": "六四", "text": "括囊，无咎无誉。", "interpretation": "扎紧口袋，没有灾祸也没有荣誉。比喻谨慎收敛。"},
+        {"position": "六五", "text": "黄裳元吉。", "interpretation": "黄色的下裳，大吉。"},
+        {"position": "上六", "text": "龙战于野，其血玄黄。", "interpretation": "龙在原野上交战，流出黑黄色的血。"}
+      ],
+      "image": "地势坤，君子以厚德载物。",
+      "image_interpretation": "大地气势厚实和顺，君子应该效法大地，以厚德承载万物。",
+      "core_meaning": "柔顺、包容、承载、配合",
+      "keywords": ["包容", "配合", "承载", "柔顺", "耐心"]
+    },
+    {
+      "id": 3,
+      "name": "水雷屯",
+      "short_name": "屯卦",
+      "unicode_symbol": "☵☳",
+      "upper_trigram": "坎",
+      "lower_trigram": "震",
+      "binary": "010001",
+      "judgment": "元亨利贞。勿用有攸往，利建侯。",
+      "judgment_interpretation": "屯卦象征初生，万物始生，充满艰难。不利于有所往，利于建立诸侯。",
+      "yao_ci": [
+        {"position": "初九", "text": "磐桓，利居贞，利建侯。", "interpretation": "徘徊不前，利于安居守正，利于建立诸侯。"},
+        {"position": "六二", "text": "屯如邅如，乘马班如。匪寇婚媾，女子贞不字，十年乃字。", "interpretation": "艰难徘徊，骑马盘旋。不是强盗而是求婚者，女子守正不嫁，十年才嫁。"},
+        {"position": "六三", "text": "即鹿无虞，惟入于林中，君子几不如舍，往吝。", "interpretation": "追鹿没有虞人引导，只会陷入林中。君子见机不如舍弃，前往会有困难。"},
+        {"position": "六四", "text": "乘马班如，求婚媾，往吉无不利。", "interpretation": "骑马盘旋，去求婚，前往吉祥，没有不利。"},
+        {"position": "九五", "text": "屯其膏，小贞吉，大贞凶。", "interpretation": "囤积膏泽，小事情守正吉祥，大事情守正凶险。"},
+        {"position": "上六", "text": "乘马班如，泣血涟如。", "interpretation": "骑马盘旋，哭泣流血。"}
+      ],
+      "image": "云雷屯，君子以经纶。",
+      "image_interpretation": "乌云密布雷声震，君子应该经营谋划。",
+      "core_meaning": "初生、艰难、酝酿、起步",
+      "keywords": ["起步", "艰难", "酝酿", "耐心", "准备"]
+    },
+    {
+      "id": 4,
+      "name": "山水蒙",
+      "short_name": "蒙卦",
+      "unicode_symbol": "☶☵",
+      "upper_trigram": "艮",
+      "lower_trigram": "坎",
+      "binary": "001010",
+      "judgment": "亨。匪我求童蒙，童蒙求我。初筮告，再三渎，渎则不告。利贞。",
+      "judgment_interpretation": "蒙卦象征启蒙。通达。不是我求童蒙，而是童蒙求我。初次占筮则告知，再三占筮就是亵渎，亵渎则不告知。利于守正。",
+      "yao_ci": [
+        {"position": "初六", "text": "发蒙，利用刑人，用说桎梏，以往吝。", "interpretation": "启发蒙昧，利于用刑罚之人，以此摆脱桎梏，但前往会有困难。"},
+        {"position": "九二", "text": "包蒙吉，纳妇吉，子克家。", "interpretation": "包容蒙昧则吉祥，娶妻吉祥，儿子能够持家。"},
+        {"position": "六三", "text": "勿用取女，见金夫，不有躬，无攸利。", "interpretation": "不要娶这个女子，她见到有钱的男子，就不能保住自身的贞节，没有什么利益。"},
+        {"position": "六四", "text": "困蒙，吝。", "interpretation": "困于蒙昧，有困难。"},
+        {"position": "六五", "text": "童蒙，吉。", "interpretation": "儿童般的蒙昧，吉祥。"},
+        {"position": "上九", "text": "击蒙，不利为寇，利御寇。", "interpretation": "打击蒙昧，不利于做强盗，利于抵御强盗。"}
+      ],
+      "image": "山下出泉，蒙。君子以果行育德。",
+      "image_interpretation": "山下流出泉水，象征启蒙。君子应该以果敢的行为培育美德。",
+      "core_meaning": "启蒙、教育、学习、开悟",
+      "keywords": ["学习", "教育", "启蒙", "求知", "成长"]
+    },
+    {
+      "id": 5,
+      "name": "水天需",
+      "short_name": "需卦",
+      "unicode_symbol": "☵☰",
+      "upper_trigram": "坎",
+      "lower_trigram": "乾",
+      "binary": "010111",
+      "judgment": "有孚，光亨贞吉，利涉大川。",
+      "judgment_interpretation": "需卦象征等待。心怀诚信，光明通达，守正吉祥，利于涉过大河。",
+      "yao_ci": [
+        {"position": "初九", "text": "需于郊，利用恒，无咎。", "interpretation": "在郊外等待，利于恒心，没有灾祸。"},
+        {"position": "九二", "text": "需于沙，小有言，终吉。", "interpretation": "在沙地等待，稍有言语之伤，最终吉祥。"},
+        {"position": "九三", "text": "需于泥，致寇至。", "interpretation": "在泥泞中等待，招致盗寇到来。"},
+        {"position": "六四", "text": "需于血，出自穴。", "interpretation": "在血泊中等待，从洞穴中脱出。"},
+        {"position": "九五", "text": "需于酒食，贞吉。", "interpretation": "在酒食中等待，守正吉祥。"},
+        {"position": "上六", "text": "入于穴，有不速之客三人来，敬之终吉。", "interpretation": "进入洞穴，有三个不速之客到来，恭敬对待他们最终吉祥。"}
+      ],
+      "image": "云上于天，需。君子以饮食宴乐。",
+      "image_interpretation": "云气上升到天上，象征等待。君子应该饮食宴乐，等待时机。",
+      "core_meaning": "等待、耐心、时机、准备",
+      "keywords": ["等待", "耐心", "时机", "准备", "不急躁"]
+    },
+    {
+      "id": 6,
+      "name": "天水讼",
+      "short_name": "讼卦",
+      "unicode_symbol": "☰☵",
+      "upper_trigram": "乾",
+      "lower_trigram": "坎",
+      "binary": "111010",
+      "judgment": "有孚窒惕，中吉，终凶。利见大人，不利涉大川。",
+      "judgment_interpretation": "讼卦象征争讼。心怀诚信但被窒息警惕，中间吉祥，最终凶险。利于见到大人，不利于涉过大河。",
+      "yao_ci": [
+        {"position": "初六", "text": "不永所事，小有言，终吉。", "interpretation": "不把事情做到底，稍有言语之争，最终吉祥。"},
+        {"position": "九二", "text": "不克讼，归而逋，其邑人三百户无眚。", "interpretation": "争讼不胜，回来逃跑，其邑中三百户没有灾祸。"},
+        {"position": "六三", "text": "食旧德，贞厉，终吉。或从王事，无成。", "interpretation": "享用旧的德业，守正虽有危险但最终吉祥。或者从事王事，不会成功。"},
+        {"position": "九四", "text": "不克讼，复即命渝，安贞吉。", "interpretation": "争讼不胜，回来就命令改变，安于正道则吉祥。"},
+        {"position": "九五", "text": "讼元吉。", "interpretation": "争讼大吉。"},
+        {"position": "上九", "text": "或锡之鞶带，终朝三褫之。", "interpretation": "或者赐予鞶带，一天之内三次被剥夺。"}
+      ],
+      "image": "天与水违行，讼。君子以作事谋始。",
+      "image_interpretation": "天向西转，水向东流，二者相违背，象征争讼。君子应该在做事之初就谋划好。",
+      "core_meaning": "争讼、争议、矛盾、谨慎",
+      "keywords": ["争议", "矛盾", "谨慎", "沟通", "和解"]
+    }
+  ],
+  "note": "本数据库目前包含前6卦作为示例。完整版本需要包含所有64卦。每卦都包含：卦名、卦象、卦辞、爻辞（6爻）、象传、核心含义、关键词等信息。适合用于算卦小程序的提示词模板中，作为RAG（检索增强生成）的知识库。"
+}

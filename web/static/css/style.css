@@ -1,0 +1,310 @@
+/* ==========================================
+   易经算卦 — 现代简约中国风
+   ========================================== */
+
+/* ── CSS Variables ── */
+:root {
+  --red:       #c0392b;
+  --red-light: #e74c3c;
+  --red-dark:  #922b21;
+  --gold:      #d4a853;
+  --gold-light:#f0d78c;
+  --bg:        #faf8f5;
+  --bg-card:   #ffffff;
+  --bg-warm:   #fdf6ee;
+  --border:    #e8e0d5;
+  --text:      #2c2416;
+  --text-mid:  #6b5e4a;
+  --text-light:#9a8d7a;
+  --shadow:    0 2px 12px rgba(44,36,22,.06);
+  --shadow-lg: 0 8px 32px rgba(44,36,22,.10);
+  --radius:    12px;
+  --radius-sm: 8px;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  max-width: 960px; margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between; height: 60px;
+}
+.logo {
+  font-size: 22px; font-weight: 700;
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+.nav { display: flex; gap: 4px; }
+.nav-btn {
+  padding: 8px 20px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 500;
+  background: transparent; color: var(--text-mid); transition: all .25s; border: none; cursor: pointer;
+}
+.nav-btn:hover { background: var(--bg-warm); color: var(--text); }
+.nav-btn.active { background: var(--red); color: #fff; box-shadow: 0 2px 8px rgba(192,57,43,.3); }
+
+/* ── Main ── */
+.main { max-width: 960px; margin: 0 auto; padding: 28px 20px 80px; }
+
+/* ── Tab ── */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn .3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Card ── */
+.card {
+  background: var(--bg-card); border-radius: var(--radius); padding: 28px;
+  margin-bottom: 20px; box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+.card-header {
+  font-size: 18px; font-weight: 700; color: var(--text);
+  margin-bottom: 20px; padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ── Method Tabs ── */
+.method-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.method-btn {
+  flex: 1; min-width: 100px; padding: 12px 16px; border-radius: var(--radius-sm);
+  font-size: 15px; font-weight: 500; background: var(--bg-warm); color: var(--text-mid);
+  transition: all .25s; border: 2px solid transparent; cursor: pointer;
+}
+.method-btn:hover { background: #fdf0de; color: var(--red); border-color: var(--gold-light); }
+.method-btn.active { background: #fff5f5; color: var(--red); border-color: var(--red); font-weight: 600; }
+
+/* ── Input ── */
+.input-group { margin-bottom: 22px; }
+.input-group label { display: block; margin-bottom: 6px; font-size: 13px; color: var(--text-light); font-weight: 500; }
+.input-group input {
+  width: 100%; padding: 13px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 16px; background: var(--bg); color: var(--text);
+  transition: all .25s; outline: none;
+}
+.input-group input:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,43,.08); }
+.input-group input::placeholder { color: var(--text-light); }
+
+/* ── Buttons ── */
+.btn-primary {
+  width: 100%; padding: 14px; background: var(--red); color: #fff;
+  font-size: 17px; font-weight: 700; border-radius: var(--radius-sm);
+  transition: all .25s; letter-spacing: 2px; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(192,57,43,.3); }
+.btn-primary:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.spinner {
+  display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.3);
+  border-top-color: #fff; border-radius: 50%; animation: spin .6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.btn-secondary {
+  padding: 10px 24px; background: var(--border); color: var(--text-mid);
+  font-size: 14px; font-weight: 500; border-radius: var(--radius-sm);
+  transition: all .2s; border: none; cursor: pointer;
+}
+.btn-secondary:hover { background: var(--gold-light); color: var(--text); }
+
+/* ── Coin Animation ── */
+.coin-animation { margin-top: 24px; }
+.yao-lines {
+  display: flex; flex-direction: column-reverse; align-items: center; gap: 8px; margin-bottom: 16px;
+}
+.yao-line {
+  padding: 10px 52px; border-radius: 6px; font-size: 20px; font-weight: bold;
+  text-align: center; min-width: 140px; transition: all .4s;
+  letter-spacing: 4px; font-family: monospace;
+}
+.yao-line.yang { background: #fff5f5; color: var(--red); }
+.yao-line.yin  { background: #f8f6f2; color: var(--text-mid); }
+.yao-line.placeholder { color: #ddd; font-weight: normal; }
+.yao-line.changing { animation: shimmer .8s ease-in-out infinite alternate; }
+@keyframes shimmer {
+  from { box-shadow: 0 0 4px rgba(192,57,43,.1); }
+  to   { box-shadow: 0 0 16px rgba(192,57,43,.25); }
+}
+.coin-status { text-align: center; font-size: 14px; color: var(--text-light); min-height: 22px; margin-top: 8px; }
+
+/* ── Result ── */
+.result-container {
+  background: var(--bg-card); border-radius: var(--radius); padding: 32px;
+  box-shadow: var(--shadow-lg); border: 1px solid var(--border);
+}
+.result-hex-row {
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+  margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; text-align: center;
+}
+.result-hex-main, .result-hex-change { text-align: center; min-width: 140px; }
+.hex-badge {
+  display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+  background: var(--red); color: #fff; margin-bottom: 10px;
+}
+.hex-badge.change { background: var(--gold); color: #5a3e1b; }
+.result-symbol { font-size: 56px; line-height: 1; margin: 4px 0; }
+.result-name { font-size: 22px; font-weight: 700; margin: 4px 0 2px; }
+.result-short { font-size: 13px; color: var(--text-light); }
+.result-core { font-size: 14px; color: var(--red); margin-top: 6px; }
+.result-arrow-wrap { display: flex; align-items: center; }
+.result-arrow { font-size: 32px; color: var(--gold); }
+
+/* ── Info Banner ── */
+.info-banner {
+  background: var(--bg-warm); border-left: 4px solid var(--gold);
+  padding: 12px 18px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 15px; color: var(--text-mid); margin-bottom: 20px;
+}
+.info-banner.wisdom { border-left-color: var(--red); }
+
+/* ── Yao Drawing Display ── */
+.yao-drawing-display {
+  text-align: center; font-family: monospace; font-size: 18px; line-height: 1.5;
+  color: var(--text); padding: 16px; margin-bottom: 8px;
+  background: var(--bg-warm); border-radius: var(--radius-sm);
+}
+
+/* ── Tags ── */
+.tag-list { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.tag {
+  display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 13px;
+  background: var(--bg-warm); color: var(--text-mid); border: 1px solid var(--border);
+  font-weight: 500;
+}
+.tag.tiny { padding: 2px 8px; font-size: 11px; border-radius: 12px; }
+
+/* ── Section ── */
+.section-title {
+  font-size: 16px; font-weight: 700; color: var(--text);
+  margin: 24px 0 10px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.section-icon { font-size: 16px; }
+
+/* ── Judgment ── */
+blockquote.judgment-text {
+  padding: 14px 18px; margin: 8px 0; font-size: 16px; font-weight: 600;
+  background: var(--bg-warm); border-left: 4px solid var(--red);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0; color: var(--text);
+  font-style: normal;
+}
+.judgment-interp {
+  font-size: 14px; color: var(--text-mid); line-height: 1.8;
+  margin: 6px 0 4px;
+}
+
+/* ── Yao List ── */
+.yao-list { display: flex; flex-direction: column; gap: 8px; }
+.yao-card {
+  padding: 14px 18px; border-radius: var(--radius-sm);
+  background: var(--bg); border: 1px solid var(--border);
+  transition: all .2s;
+}
+.yao-card:hover { border-color: var(--gold-light); }
+.yao-card.changing-highlight {
+  background: #fffbf5; border-color: var(--gold-light);
+  box-shadow: 0 0 0 2px rgba(212,168,83,.08);
+}
+.yao-header { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+.yao-pos-text { color: var(--text-light); font-weight: 400; }
+.changing-dot { color: var(--gold); font-size: 12px; }
+.yao-text { font-size: 15px; color: var(--text); line-height: 1.7; }
+.yao-interp { font-size: 13px; color: var(--text-light); margin-top: 4px; line-height: 1.7; }
+
+/* ── Wisdom ── */
+.wisdom-text { font-size: 15px; color: var(--text); line-height: 1.8; }
+.disclaimer {
+  margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border);
+  text-align: center; font-size: 13px; color: var(--text-light);
+}
+
+/* ── Hexagram Grid ── */
+.hexagram-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px;
+}
+.hex-card {
+  background: var(--bg-card); border-radius: var(--radius-sm); padding: 18px 16px;
+  cursor: pointer; transition: all .2s; border: 1px solid var(--border);
+  text-align: center;
+}
+.hex-card:hover {
+  border-color: var(--red); transform: translateY(-2px); box-shadow: var(--shadow-lg);
+}
+.hex-card-sym { font-size: 30px; margin-bottom: 4px; }
+.hex-card-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.hex-card-meaning { font-size: 12px; color: var(--text-light); margin-bottom: 6px; }
+.hex-card-tags { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; }
+
+/* ── Search ── */
+.search-box { display: flex; gap: 8px; }
+.search-box input {
+  flex: 1; padding: 10px 14px; border: 2px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 15px; outline: none; background: var(--bg); transition: all .25s;
+}
+.search-box input:focus { border-color: var(--red); }
+.empty-state {
+  text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 15px;
+}
+
+/* ── Modal ── */
+.modal {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+}
+.modal.hidden { display: none; }
+.modal-overlay { position: absolute; inset: 0; background: rgba(44,36,22,.5); backdrop-filter: blur(2px); }
+.modal-content {
+  position: relative; background: var(--bg-card); border-radius: var(--radius);
+  padding: 32px; max-width: 680px; width: 92%; max-height: 82vh; overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+.modal-close {
+  position: absolute; top: 12px; right: 16px;
+  font-size: 28px; background: none; color: var(--text-light); border: none; cursor: pointer;
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: all .2s;
+}
+.modal-close:hover { background: var(--bg-warm); color: var(--text); }
+.modal-sym { font-size: 52px; text-align: center; }
+.modal-name { font-size: 22px; font-weight: 700; text-align: center; margin: 6px 0 2px; }
+.modal-short { font-size: 13px; color: var(--text-light); text-align: center; }
+.modal-core { font-size: 15px; color: var(--red); text-align: center; margin: 6px 0 10px; }
+
+/* ── Utils ── */
+.hidden { display: none; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .header-inner { height: 50px; }
+  .logo { font-size: 18px; letter-spacing: 0; }
+  .nav-btn { padding: 6px 14px; font-size: 13px; }
+  .main { padding: 16px 12px 60px; }
+  .card { padding: 18px; }
+  .result-container { padding: 20px; }
+  .result-symbol { font-size: 40px; }
+  .result-name { font-size: 18px; }
+  .result-hex-row { gap: 12px; }
+  .result-arrow { font-size: 24px; }
+  .hexagram-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .method-btn { font-size: 13px; padding: 10px 8px; }
+  .modal-content { padding: 20px; }
+}

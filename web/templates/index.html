@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易经算卦</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <h1 class="logo">☰ 易经算卦</h1>
+    <nav class="nav">
+      <button class="nav-btn active" data-tab="divine">起卦占卜</button>
+      <button class="nav-btn" data-tab="browse">六十四卦</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ====== 算卦面板 ====== -->
+  <section id="tab-divine" class="tab-content active">
+    <div class="card divine-card">
+      <div class="card-header">起卦占卜</div>
+      <div class="method-tabs">
+        <button class="method-btn active" data-method="coin">🪙 铜钱法</button>
+        <button class="method-btn" data-method="digital">🎲 数字法</button>
+        <button class="method-btn" data-method="time">🕐 时间法</button>
+      </div>
+      <div class="input-group">
+        <label for="question">你想问什么？（可选）</label>
+        <input type="text" id="question" placeholder="例如：我最近的事业运势如何？" maxlength="200">
+      </div>
+      <button id="btn-divine" class="btn-primary">开始起卦</button>
+      <div id="coin-animation" class="coin-animation hidden">
+        <div class="yao-lines" id="yao-lines"></div>
+        <div class="coin-status" id="coin-status"></div>
+      </div>
+    </div>
+    <div id="divine-result" class="hidden"></div>
+  </section>
+
+  <!-- ====== 六十四卦浏览 ====== -->
+  <section id="tab-browse" class="tab-content">
+    <div class="card">
+      <div class="card-header">六十四卦</div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索卦名、关键词...">
+        <button id="btn-search" class="btn-secondary">搜索</button>
+      </div>
+    </div>
+    <div id="hexagram-grid" class="hexagram-grid"></div>
+    <div id="hexagram-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

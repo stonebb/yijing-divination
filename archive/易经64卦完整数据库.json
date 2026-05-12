@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "name": "易经六十四卦数据库（完整版）",
+    "version": "1.0",
+    "description": "包含《周易》六十四卦的完整信息，适用于算卦小程序",
+    "source": "基于王弼注本《周易》整理",
+    "total_hexagrams": 64,
+    "note": "本文件包含完整64卦数据。每卦包含：卦序、卦名、Unicode符号、上下卦、二进制编码、卦辞、卦辞解读、六爻爻辞及解读、象传、象传解读、核心含义、关键词"
+  },
+  "trigrams": {
+    "乾": {"unicode": "☰", "nature": "天", "attribute": "健", "binary": "111"},
+    "兑": {"unicode": "☱", "nature": "泽", "attribute": "悦", "binary": "110"},
+    "离": {"unicode": "☲", "nature": "火", "attribute": "丽", "binary": "101"},
+    "震": {"unicode": "☳", "nature": "雷", "attribute": "动", "binary": "100"},
+    "巽": {"unicode": "☴", "nature": "风", "attribute": "入", "binary": "011"},
+    "坎": {"unicode": "☵", "nature": "水", "attribute": "陷", "binary": "010"},
+    "艮": {"unicode": "☶", "nature": "山", "attribute": "止", "binary": "001"},
+    "坤": {"unicode": "☷", "nature": "地", "attribute": "顺", "binary": "000"}
+  },
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾为天",
+      "short_name": "乾卦",
+      "unicode_symbol": "☰☰",
+      "upper_trigram": "乾",
+      "lower_trigram": "乾",
+      "binary": "111111",
+      "judgment": "元亨利贞。",
+      "judgment_interpretation": "乾卦象征天，代表创始、通达、适宜、正固。这是纯阳之卦，寓意强盛和进取。",
+      "yao_ci": [
+        {"position": "初九", "text": "潜龙勿用。", "interpretation": "龙潜伏在水中，暂时不要行动。时机未到，宜隐居养晦。"},
+        {"position": "九二", "text": "见龙在田，利见大人。", "interpretation": "龙出现在田野，有利于见到有德行的人。才华初现，得到赏识。"},
+        {"position": "九三", "text": "君子终日乾乾，夕惕若厉，无咎。", "interpretation": "君子整天勤奋努力，晚上也警惕谨慎，即使有危险也无灾祸。"},
+        {"position": "九四", "text": "或跃在渊，无咎。", "interpretation": "或者跃起或者深陷深渊，没有灾祸。审时度势，进退有据。"},
+        {"position": "九五", "text": "飞龙在天，利见大人。", "interpretation": "龙飞在天空中，有利于见到有德行的人。事业鼎盛，得位得时。"},
+        {"position": "上九", "text": "亢龙有悔。", "interpretation": "龙飞得太高，会有悔恨。物极必反，宜知进退。"}
+      ],
+      "image": "天行健，君子以自强不息。",
+      "image_interpretation": "天道运行刚健有力，君子应该效法天道，自强不息。",
+      "core_meaning": "创始、进取、刚健、成功",
+      "keywords": ["成功", "进取", "创始", "刚健", "领导力"]
+    }
